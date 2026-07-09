@@ -8,7 +8,7 @@ let myWeek = [
     {day: "Wednesday", activity: "Playing Video Games", category: "Entertainment", hoursSpent: 3, enjoyment: 7, timeOfDay: "Evening"},
     {day: "Thursday", activity: "Figure Drawing", category: "Creative", hoursSpent: 4, enjoyment: 8, timeOfDay: "Afternoon"},
     {day: "Friday", activity: "Watching Anime", category: "Entertainment", hoursSpent: 3, enjoyment: 9, timeOfDay: "Evening"},
-    {day: "Saturday", activity: "Jogging", category: "Health", hoursSpent: 1, enjoyment: 5, timeOfDay: "Evening"}
+    {day: "Saturday", activity: "Jogging", category: "Physical", hoursSpent: 1, enjoyment: 5, timeOfDay: "Evening"}
 ]
 
 // --- PREDICTIONS ---
@@ -20,8 +20,12 @@ let myWeek = [
     // It looks like most activities are done in the afternoon and evening.
 
 // --- ANALYSIS FUNCTIONS ---
+function filterBasedOnCategory(category, weekData) {
+    return weekData.filter(entry => entry.category === category);
+}
 
-
+let selectedCategory = window.prompt("What category would you like to filter by? (Entertainment, Education, Creative, Physical)");
+console.log(filterBasedOnCategory(selectedCategory, myWeek));
 
 
 
