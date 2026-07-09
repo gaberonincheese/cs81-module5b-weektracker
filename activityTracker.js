@@ -1,5 +1,6 @@
 // GitHub link:
 
+// --- WEEKLY DATA ---
 let myWeek = [
     {day: "Sunday", activity: "Watching Anime", category: "Entertainment", hoursSpent: 3, enjoyment: 7, timeOfDay: "Afternoon"},
     {day: "Monday", activity: "Programming", category: "Education", hoursSpent: 4, enjoyment: 5, timeOfDay: "Morning"},
@@ -10,8 +11,15 @@ let myWeek = [
     {day: "Saturday", activity: "Jogging", category: "Health", hoursSpent: 1, enjoyment: 5, timeOfDay: "Evening"}
 ]
 
+// --- PREDICTIONS ---
+// Which activity will have the highest enjoyment?
+    // Looking at my scoring, I think watching anime will have the highest enjoyment score since it's an activity I do with friends.
+// What category will dominate my week?
+    // Entertainment is the dominant category.
+// What patterns might exist around time of day?
+    // It looks like most activities are done in the afternoon and evening.
 
-
+// --- ANALYSIS FUNCTIONS ---
 
 
 
