@@ -1,4 +1,14 @@
+// GitHub link:
 
+let myWeek = [
+    {day: "Sunday", activity: "Watching Anime", category: "Entertainment", hoursSpent: 3, enjoyment: 7, timeOfDay: "Afternoon"},
+    {day: "Monday", activity: "Programming", category: "Education", hoursSpent: 4, enjoyment: 5, timeOfDay: "Morning"},
+    {day: "Tuesday", activity: "Figure Drawing", category: "Creative", hoursSpent: 4, enjoyment: 6, timeOfDay: "Afternoon"},
+    {day: "Wednesday", activity: "Playing Video Games", category: "Entertainment", hoursSpent: 3, enjoyment: 7, timeOfDay: "Evening"},
+    {day: "Thursday", activity: "Figure Drawing", category: "Creative", hoursSpent: 4, enjoyment: 8, timeOfDay: "Afternoon"},
+    {day: "Friday", activity: "Watching Anime", category: "Entertainment", hoursSpent: 3, enjoyment: 9, timeOfDay: "Evening"},
+    {day: "Saturday", activity: "Jogging", category: "Health", hoursSpent: 1, enjoyment: 5, timeOfDay: "Evening"}
+]
 
 
 
