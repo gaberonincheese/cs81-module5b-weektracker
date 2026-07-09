@@ -24,12 +24,19 @@ function filterBasedOnCategory(category, weekData) {
     return weekData.filter(entry => entry.category === category);
 }
 
-let selectedCategory = window.prompt("What category would you like to filter by? (Entertainment, Education, Creative, Physical)");
+//let selectedCategory = window.prompt("What category would you like to filter by? (Entertainment, Education, Creative, Physical)");
+let selectedCategory = "Entertainment";
 console.log(filterBasedOnCategory(selectedCategory, myWeek));
 
+function hoursSpentOnActivity(weekData, activity) {
+    return weekData.filter(entry => entry.activity === activity).reduce((totalHours, entry) => totalHours + entry.hoursSpent, 0);
+}
 
+let selectedActivity = "Watching Anime";
+console.log("You spent " + hoursSpentOnActivity(myWeek, selectedActivity) + " hours " + selectedActivity + " this week.");
 
-
+// what do i want to do?
+// i want to parse the week, collect all activities, and sum the hours spent on each activity
 
 
 
@@ -37,10 +44,10 @@ console.log(filterBasedOnCategory(selectedCategory, myWeek));
 
 // --- NOTES ---
 // map – transform each element
-[1, 2, 3].map(n => n * 2); // [2, 4, 6]
+//[1, 2, 3].map(n => n * 2); // [2, 4, 6]
 
 // filter – keep matching elements
-[1, 2, 3, 4].filter(n => n % 2 === 0); // [2, 4]
+//[1, 2, 3, 4].filter(n => n % 2 === 0); // [2, 4]
 
 // reduce – combine into one value
-[1, 2, 3].reduce((sum, n) => sum + n, 0); // 6
+//[1, 2, 3].reduce((sum, n) => sum + n, 0); // 6
