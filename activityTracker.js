@@ -20,6 +20,8 @@ let myWeek = [
     // It looks like most activities are done in the afternoon and evening.
 
 // --- ANALYSIS FUNCTIONS ---
+
+// --- FILTER BASED ON CATEGORY ---
 function filterBasedOnCategory(category, weekData) {
     return weekData.filter(entry => entry.category === category);
 }
@@ -28,18 +30,27 @@ function filterBasedOnCategory(category, weekData) {
 let selectedCategory = "Entertainment";
 console.log(filterBasedOnCategory(selectedCategory, myWeek));
 
+// --- HOURS SPENT ON GIVEN ACTIVITY ---
 function hoursSpentOnActivity(weekData, activity) {
     return weekData.filter(entry => entry.activity === activity).reduce((totalHours, entry) => totalHours + entry.hoursSpent, 0);
 }
 
 let selectedActivity = "Watching Anime";
-console.log("You spent " + hoursSpentOnActivity(myWeek, selectedActivity) + " hours " + selectedActivity + " this week.");
+console.log("I spent " + hoursSpentOnActivity(myWeek, selectedActivity) + " hours " + selectedActivity + " this week.");
 
-// what do i want to do?
-// i want to parse the week, collect all activities, and sum the hours spent on each activity
+// --- HOURS SPENT ON PHYSICAL ACTIVITIES ---
+function hoursPhysicalActivities(weekData) {
+    // Filtering weekData for physical activities... then accumulating hours spent on those activities using reduce.
+    return weekData.filter(entry => entry.category === "Physical").reduce((totalHours, entry) => totalHours + entry.hoursSpent, 0);
+}
 
+// --- ENJOYMENT BY TIME OF DAY ---
+function enjoymentByTimeOfDay(weekData) {
+    return weekData.reduce((totalHours, entry) => totalHours + entry.hoursSpent, 0);
+}
 
-
+// --- CUSTOM HIGHER-ORDER FUNCTION ---
+console.log(enjoymentByTimeOfDay(myWeek.filter(entry => entry.timeOfDay === "Afternoon")));
 
 
 // --- NOTES ---
