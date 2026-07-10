@@ -52,7 +52,6 @@ function enjoymentByTimeOfDay(weekData) {
 // --- CUSTOM HIGHER-ORDER FUNCTION ---
 console.log(enjoymentByTimeOfDay(myWeek.filter(entry => entry.timeOfDay === "Afternoon")));
 
-
 // --- NOTES ---
 // map – transform each element
 //[1, 2, 3].map(n => n * 2); // [2, 4, 6]
