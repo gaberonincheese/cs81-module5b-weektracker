@@ -1,4 +1,4 @@
-// GitHub link:
+// GitHub link: https://github.com/gaberonincheese/cs81-module5b-weektracker
 
 // --- WEEKLY DATA ---
 let myWeek = [
